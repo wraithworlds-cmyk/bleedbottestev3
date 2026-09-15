@@ -61,6 +61,4 @@ class Welcome(commands.Cog):
         await interaction.response.send_message(text, ephemeral=True)
 
 async def setup(bot):
-    cog = Welcome(bot)
-    await bot.add_cog(cog)
-    bot.tree.add_command(cog.welcome)
+    await bot.add_cog(Welcome(bot))
